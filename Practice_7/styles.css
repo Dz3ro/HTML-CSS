@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+.container {
+  display: flexbox;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2a2138;
+  justify-content: center;
+}
+.button {
+  height: 10vh;
+  align-items: center;
+  display: flex;
+  padding: 1vh;
+}
+
+.button:hover {
+  background-color: #221a2e;
+}
+
+span {
+  display: inline-block;
+  color: #fff;
+  font-size: 4vw;
+  margin-left: 2rem;
+}
+
+.container .fas {
+  width: 2vw;
+  margin-left: 2rem;
+}
+
+@media screen and (min-width: 760px) {
+  .container {
+    width: 20vw;
+  }
+
+  span {
+    font-size: 2vw;
+  }
+}

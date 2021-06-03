@@ -1,0 +1,53 @@
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  background: url("Images/cosmos/cosmos_pqshyp_c_scale\,w_320.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 50vw;
+  height: 15vw;
+  padding: 6vw;
+}
+
+h1,
+p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3vw;
+  word-spacing: 1rem;
+}
+
+p {
+  text-transform: capitalize;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1vw;
+}
+
+@media screen and (min-width: 853px) {
+  .container {
+    background: url("Images/cosmos/cosmos_pqshyp_c_scale\,w_846.jpg");
+  }
+}
+
+@media screen and (min-width: 1228px) {
+  .container {
+    background: url("Images/cosmos/cosmos_pqshyp_c_scale\,w_1234.jpg");
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    background: url("Images/cosmos/cosmos_pqshyp_c_scale\,w_1440.jpg");
+  }
+}

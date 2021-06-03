@@ -1,0 +1,266 @@
+:root {
+  --navBarHeight: 6vh;
+  --navbarButtonSpaceBetween: 15px;
+  --navbarInputHeight: 32px;
+  --navBarInputBorderColor: #ccc;
+  --navBarInputShadow: #eee;
+  --navBarIconSize: 25px;
+  --navBarSideWidth: 13vw;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* navBar */
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--navBarHeight);
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+  background: #fff;
+}
+
+.nav--part {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  align-items: center;
+}
+
+.nav--part__left {
+  justify-content: flex-start;
+  padding-left: var(--navbarButtonSpaceBetween);
+}
+
+.nav--part__center {
+  justify-content: center;
+}
+
+.nav--part__right {
+  justify-content: flex-end;
+  padding-right: var(--navbarButtonSpaceBetween);
+}
+
+.nav--part button {
+  width: var(--navBarIconSize);
+  height: var(--navBarIconSize);
+  outline: none;
+  border: none;
+  margin: auto var(--navbarButtonSpaceBetween);
+}
+
+.navBarButtonContainer {
+  display: inline-block;
+  width: var(--navBarIconSize);
+  height: var(--navBarIconSize);
+  outline: none;
+  border: none;
+  margin: auto var(--navbarButtonSpaceBetween);
+}
+.navBarButtonContainer img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--navBarIconSize) / 2);
+}
+
+.nav--part button img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+#navbarButton__Youtube {
+  width: calc(var(--navBarIconSize) * 4);
+  border-radius: 0px;
+}
+
+.nav--part__center--searchInputAndButton {
+  box-shadow: 0 0 0.8 var(--navBarInputShadow);
+  border: 1px solid var(--navBarInputBorderColor);
+  border-radius: 1px;
+  height: var(--navbarInputHeight);
+  box-sizing: border-box;
+}
+
+.nav--part__center input {
+  width: 500px;
+  outline: none;
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: #111;
+}
+
+#buttonSearch {
+  margin-left: 0;
+  width: 65px;
+  color: #333;
+  border: 1px solid var(--navBarInputBorderColor);
+  border-left: none;
+  border-radius: 1px;
+  height: var(--navbarInputHeight);
+}
+
+#buttonSearch img {
+  width: 18px;
+  height: 18px;
+}
+
+/* navSide */
+
+.navbarSide {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: var(--navBarSideWidth);
+  height: calc(100vh - var(--navBarHeight));
+  top: var(--navBarHeight);
+  overflow-y: scroll;
+  z-index: 99;
+  background: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+  background: #ccc;
+  border-radius: 1px;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: red orange;
+}
+
+.navbarSide--Section {
+  border-bottom: 1px solid var(--navBarInputBorderColor);
+  margin-top: 2rem;
+}
+
+.navbarSide--Section--Item {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.navbarSide--Section--Item img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  margin: auto 25px;
+  border-radius: 12.5px;
+}
+
+.navbarSide--Section h2 {
+  color: #666;
+  font-size: 2rem;
+  margin-left: 2.2rem;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.navbarSide--Section--Item span {
+  color: #666;
+  font-size: 1.6rem;
+}
+
+.navbarSide--Section p {
+  color: #666;
+  font-size: 1.6rem;
+  text-align: left;
+  margin: 2rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+#copyright {
+  color: #666;
+  font-size: 1.3rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Main */
+
+main {
+  top: var(--navBarHeight);
+  left: var(--navBarSideWidth);
+  background: #f9f9f9;
+  padding: 1px;
+  overflow-y: scroll;
+  width: calc(100vw - var(--navBarSideWidth));
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 15px;
+  padding-top: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.video {
+  height: 280px;
+}
+
+.video a {
+  text-decoration: none;
+}
+
+.video--screen {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.video--subIcon {
+  min-width: 40px;
+  max-height: 40px;
+  border-radius: 20px;
+  object-fit: cover;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.video--title {
+  display: inline-block;
+  margin: 5px;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.video--text {
+  display: block;
+  font-size: 1.7rem;
+  margin-left: 55px;
+}
+
+.video--text__part2 {
+  display: inline-block;
+  font-size: 1.7rem;
+}
+
+.video span:nth-of-type(2) {
+  margin-left: 55px;
+}
